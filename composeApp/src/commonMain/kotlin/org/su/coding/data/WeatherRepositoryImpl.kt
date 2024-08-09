@@ -7,15 +7,10 @@ import io.ktor.client.call.body
 import io.ktor.client.request.get
 import io.ktor.util.network.UnresolvedAddressException
 import kotlinx.serialization.SerializationException
-import org.koin.compose.koinInject
-import org.koin.core.component.KoinComponent
-import org.koin.core.component.inject
 import util.NetworkError
 import util.Result
 
 class WeatherRepositoryImpl(private val httpClient: HttpClient) : WeatherRepository{
-
-//    private val httpClient: HttpClient by inject()
 
     override suspend fun getForecastDays(): Result<List<WeatherData>, NetworkError> {
         val response = try {

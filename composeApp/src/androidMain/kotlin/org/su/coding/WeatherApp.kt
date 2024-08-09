@@ -1,6 +1,6 @@
 package org.su.coding
 
-import KoinInitializer
+import org.su.coding.di.KoinInitializer
 import android.app.Application
 
 class WeatherApp: Application() {
